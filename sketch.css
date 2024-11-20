@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+:root {
+    --col1: #EEEEEE;
+    --col2: #686D76;
+    --col3: #373A40;
+    --col4: #DC5F00;
+
+    --col-bg: var(--col4);
+    --col-text: var(--col1);
+    --col-card: var(--col2);
+    --col-primary: var(--col3);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Geist Mono", sans-serif;
+}
+
+html {
+    background-color: var(--col-bg);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;
+}
+
+* {
+    color: var(--col-text);
+}
+
+.appbar ul {
+    margin: 1em;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 2em;
+}
+
+.appbar li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appbar li a {
+    background-color: var(--col-primary);
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5em 1em;
+
+    border-radius: 99999em;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: transform 100ms ease;
+}
+
+.appbar li a:hover {
+    transform: scale(1.05);
+}
+
+.appbar li a > span {
+    margin-left: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+    .appbar li a > span {
+        display: none;
+    }
+}
+
+.appbar .pb {
+    background-color: var(--col-card);
+    border-radius: 9999em;
+    padding: 0.5em;
+    aspect-ratio: 1;
+    line-height: 1em;
+
+    display: flex;
+    align-items: center;
+}
+
+.maps {
+    flex-grow: 1;
+    background-image: url("maps.png");
+}
